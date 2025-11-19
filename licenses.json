@@ -62,8 +62,8 @@
     },
     {
       "key": "STUDENT-BATCH-B1",
-      "isActive": true,
-      "owner": "Promotion 2025 - Groupe B"
+      "isActive": false,
+      "owner": "Promotion 2025 - Groupe B (ACTIVATED)"
     },
     {
       "key": "RESEARCH-LAB-CNRS",
