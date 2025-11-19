@@ -14,7 +14,7 @@ interface RemoteMetadata {
 }
 
 // Placeholder - User must update this
-const METADATA_URL = 'https://raw.githubusercontent.com/stackblitz/neurospin-licenses/main/metadata.json';
+const METADATA_URL = 'https://raw.githubusercontent.com/KNIGHTABDO/eurospin-data-/main/metadata.json';
 
 // Simple semver comparison (e.g. "1.0.1" > "1.0.0")
 const isNewerVersion = (oldVer: string, newVer: string): boolean => {

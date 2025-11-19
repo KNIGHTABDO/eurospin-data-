@@ -14,7 +14,7 @@ interface LicenseDatabase {
 
 // Placeholder URL - The user will need to replace this with their actual raw GitHub file URL
 // Example: https://raw.githubusercontent.com/username/repo/main/licenses.json
-const LICENSE_DB_URL = 'https://raw.githubusercontent.com/stackblitz/neurospin-licenses/main/licenses.json';
+const LICENSE_DB_URL = 'https://raw.githubusercontent.com/KNIGHTABDO/eurospin-data-/main/licenses.json';
 
 export const verifyLicenseKey = async (inputKey: string): Promise<{ valid: boolean; message: string; owner?: string }> => {
   // MOCK DATA for demonstration or fallback

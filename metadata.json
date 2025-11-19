@@ -1,5 +1,6 @@
 {
-  "name": "NeuroSpin: Virtual MRI Physics Tutor",
-  "description": "An interactive educational simulator for medical students to visualize MRI physics, signal processing, and tissue contrast mechanisms using real-time approximations and AI-driven explanations.",
-  "requestFramePermissions": []
+  "version": "1.0.0",
+  "releaseNotes": "Initial release of NeuroSpin Physics Tutor.",
+  "downloadUrl": "https://github.com/KNIGHTABDO/eurospin-data-/releases",
+  "forceUpdate": false
 }

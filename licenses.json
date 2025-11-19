@@ -1,0 +1,14 @@
+{
+  "licenses": [
+    {
+      "key": "NEURO-DEMO-2025",
+      "isActive": true,
+      "owner": "Utilisateur Démo"
+    },
+    {
+      "key": "RAD-X99-PHYS",
+      "isActive": true,
+      "owner": "Dr. House"
+    }
+  ]
+}
