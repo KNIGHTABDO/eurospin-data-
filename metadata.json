@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "releaseNotes": "Initial release of NeuroSpin Physics Tutor.",
-  "downloadUrl": "https://github.com/KNIGHTABDO/eurospin-data-/releases",
+  "releaseNotes": "🎉 Version initiale de NeuroSpin\n• Support complet Linux (AppImage & .deb)\n• Support Windows (.exe)\n• Système de licence avec activation unique\n• Vérification automatique des mises à jour\n• Images IRM réelles (Cerveau, Colonne, Genou, Abdomen)\n• Interface en français",
+  "downloadUrl": "https://github.com/KNIGHTABDO/eurospin-data-/releases/tag/v1.0.0",
   "forceUpdate": false
 }

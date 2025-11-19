@@ -1,7 +1,12 @@
 {
-  "name": "neurospin:-virtual-mri-physics-tutor",
+  "name": "neurospin-virtual-mri-physics-tutor",
   "private": true,
   "version": "0.0.0",
+  "description": "NeuroSpin: Virtual MRI Physics Tutor",
+  "author": {
+    "name": "NeuroSpin Team",
+    "email": "contact@neurospin.app"
+  },
   "type": "module",
   "main": "electron/main.js",
   "scripts": {
@@ -41,7 +46,8 @@
     "d3": "^7.9.0",
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "vercel": "^48.10.4"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
