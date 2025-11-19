@@ -117,8 +117,8 @@
     },
     {
       "key": "MRI-TECH-TRAINING",
-      "isActive": true,
-      "owner": "Formation Manipulateur Radio"
+      "isActive": false,
+      "owner": "Formation Manipulateur Radio (ACTIVATED)"
     },
     {
       "key": "GUEST-SPEAKER-CONF",
