@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Key, Lock, Loader, CheckCircle, XCircle } from 'lucide-react';
-import { verifyLicenseKey, saveLicense } from '../services/licenseService';
+import { verifyLicenseKey, saveLicense, invalidateRemoteLicense } from '../services/licenseService';
 
 interface LicenseModalProps {
   onLicenseVerified: () => void;
@@ -16,17 +16,29 @@ const LicenseModal: React.FC<LicenseModalProps> = ({ onLicenseVerified }) => {
     if (!key.trim()) return;
 
     setStatus('checking');
-    setMessage('');
+    setMessage('Vérification de la licence...');
 
     const result = await verifyLicenseKey(key.trim());
 
     if (result.valid) {
-      saveLicense(key.trim(), result.owner || 'Utilisateur');
-      setStatus('valid');
-      setMessage(`Bienvenue, ${result.owner || 'Utilisateur'} !`);
-      setTimeout(() => {
-        onLicenseVerified();
-      }, 1500);
+      setMessage('Activation définitive en cours...');
+      try {
+        // Burn the key on GitHub so it can't be used again
+        await invalidateRemoteLicense(key.trim());
+        
+        // Save locally for this device
+        saveLicense(key.trim(), result.owner || 'Utilisateur');
+        
+        setStatus('valid');
+        setMessage(`Bienvenue, ${result.owner || 'Utilisateur'} !`);
+        setTimeout(() => {
+          onLicenseVerified();
+        }, 1500);
+      } catch (error) {
+        console.error(error);
+        setStatus('invalid');
+        setMessage("Erreur lors de l'activation. Vérifiez votre connexion.");
+      }
     } else {
       setStatus('invalid');
       setMessage(result.message);
