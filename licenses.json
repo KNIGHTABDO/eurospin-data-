@@ -2,8 +2,8 @@
   "licenses": [
     {
       "key": "NEURO-STUDENT-2025",
-      "isActive": true,
-      "owner": "Étudiant Médecine"
+      "isActive": false,
+      "owner": "Étudiant Médecine (ACTIVATED)"
     },
     {
       "key": "NEURO-PRO-X88",
