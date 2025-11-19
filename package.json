@@ -9,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "electron:dev": "concurrently \"vite\" \"wait-on tcp:5173 && cross-env NODE_ENV=development electron .\"",
-    "electron:build": "vite build && electron-builder"
+    "electron:build": "vite build && electron-builder",
+    "electron:build:linux": "vite build && electron-builder --linux",
+    "electron:build:win": "vite build && electron-builder --win"
   },
   "build": {
     "appId": "com.neurospin.tutor",
@@ -23,11 +25,15 @@
     ],
     "win": {
       "target": "nsis",
-      "icon": "public/vite.svg"
+      "icon": "public/assets/brain_t1.png"
     },
     "linux": {
-      "target": "AppImage",
-      "category": "Education"
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Education",
+      "icon": "public/assets/brain_t1.png"
     }
   },
   "dependencies": {
