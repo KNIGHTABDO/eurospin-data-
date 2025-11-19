@@ -12,8 +12,8 @@
     },
     {
       "key": "UNIV-PARIS-SACLAY-01",
-      "isActive": true,
-      "owner": "Université Paris-Saclay"
+      "isActive": false,
+      "owner": "Université Paris-Saclay (ACTIVATED)"
     },
     {
       "key": "DEMO-KEY-FREE",
