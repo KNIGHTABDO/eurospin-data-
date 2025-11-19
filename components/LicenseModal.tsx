@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Key, Lock, Loader, CheckCircle, XCircle } from 'lucide-react';
-import { verifyLicenseKey } from '../services/licenseService';
+import { verifyLicenseKey, saveLicense } from '../services/licenseService';
 
 interface LicenseModalProps {
   onLicenseVerified: () => void;
@@ -21,6 +21,7 @@ const LicenseModal: React.FC<LicenseModalProps> = ({ onLicenseVerified }) => {
     const result = await verifyLicenseKey(key.trim());
 
     if (result.valid) {
+      saveLicense(key.trim(), result.owner || 'Utilisateur');
       setStatus('valid');
       setMessage(`Bienvenue, ${result.owner || 'Utilisateur'} !`);
       setTimeout(() => {

@@ -15,6 +15,7 @@ import LicenseModal from './components/LicenseModal';
 import UpdateNotification from './components/UpdateNotification';
 import { fetchMRIExplanation } from './services/geminiService';
 import { checkForUpdates, UpdateInfo } from './services/updateService';
+import { getSavedLicense, verifyLicenseKey } from './services/licenseService';
 import { BodyRegion, MRISequence, SimulationState } from './types';
 import { TISSUES, REGION_TISSUES, APP_VERSION } from './constants';
 
@@ -34,6 +35,19 @@ const App: React.FC = () => {
     progress: 0,
     timeMs: 0
   });
+
+  // LICENSE CHECK
+  useEffect(() => {
+    const checkLicense = async () => {
+      const saved = getSavedLicense();
+      if (saved) {
+        // Optional: Re-verify with server silently to check for revocation
+        // For now, we trust the local storage to allow offline usage
+        setIsLicensed(true);
+      }
+    };
+    checkLicense();
+  }, []);
 
   // UPDATE CHECK
   useEffect(() => {
