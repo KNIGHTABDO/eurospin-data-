@@ -17,34 +17,14 @@ interface LicenseDatabase {
 const LICENSE_DB_URL = 'https://raw.githubusercontent.com/KNIGHTABDO/eurospin-data-/main/licenses.json';
 
 export const verifyLicenseKey = async (inputKey: string): Promise<{ valid: boolean; message: string; owner?: string }> => {
-  // MOCK DATA for demonstration or fallback
-  const mockData: LicenseDatabase = {
-      licenses: [
-          { key: "NEURO-DEMO-2025", isActive: true, owner: "Utilisateur Démo" },
-          { key: "RAD-X99-PHYS", isActive: true, owner: "Dr. House" },
-          { key: "STUDENT-001", isActive: false, owner: "Étudiant (Expiré)" }
-      ]
-  };
-
   try {
-    let data: LicenseDatabase = mockData;
-
-    try {
-        const response = await fetch(LICENSE_DB_URL);
-        if (response.ok) {
-            data = await response.json();
-        } else {
-            console.warn("Could not fetch remote licenses, using mock data.");
-        }
-    } catch (netError) {
-        console.warn("Network error fetching licenses, using mock data.", netError);
-    }
+    const response = await fetch(LICENSE_DB_URL, { cache: 'no-store' });
     
-    // Simulate network delay for realism if using mock
-    if (data === mockData) {
-        await new Promise(resolve => setTimeout(resolve, 1000));
+    if (!response.ok) {
+        throw new Error("Impossible de contacter le serveur de licences.");
     }
 
+    const data: LicenseDatabase = await response.json();
     const license = data.licenses.find(l => l.key === inputKey);
 
     if (!license) {
@@ -59,6 +39,6 @@ export const verifyLicenseKey = async (inputKey: string): Promise<{ valid: boole
 
   } catch (error) {
     console.error("License check failed", error);
-    return { valid: false, message: "Erreur de connexion au serveur de licence." };
+    return { valid: false, message: "Erreur de connexion au serveur de licence. Vérifiez votre internet." };
   }
 };

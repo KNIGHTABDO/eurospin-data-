@@ -1,14 +1,129 @@
 {
   "licenses": [
     {
-      "key": "NEURO-DEMO-2025",
+      "key": "NEURO-STUDENT-2025",
       "isActive": true,
-      "owner": "Utilisateur Démo"
+      "owner": "Étudiant Médecine"
     },
     {
-      "key": "RAD-X99-PHYS",
+      "key": "NEURO-PRO-X88",
       "isActive": true,
-      "owner": "Dr. House"
+      "owner": "Radiologue Pro"
+    },
+    {
+      "key": "UNIV-PARIS-SACLAY-01",
+      "isActive": true,
+      "owner": "Université Paris-Saclay"
+    },
+    {
+      "key": "DEMO-KEY-FREE",
+      "isActive": true,
+      "owner": "Version Démo"
+    },
+    {
+      "key": "HOSP-LYON-SUD-001",
+      "isActive": true,
+      "owner": "Hôpital Lyon Sud - Service Radio"
+    },
+    {
+      "key": "HOSP-LYON-SUD-002",
+      "isActive": true,
+      "owner": "Hôpital Lyon Sud - Interne"
+    },
+    {
+      "key": "CHU-BORDEAUX-IMG",
+      "isActive": true,
+      "owner": "CHU Bordeaux"
+    },
+    {
+      "key": "FAC-MED-MARSEILLE",
+      "isActive": true,
+      "owner": "Faculté de Médecine Marseille"
+    },
+    {
+      "key": "CLINIQUE-PASTEUR-TOULOUSE",
+      "isActive": true,
+      "owner": "Clinique Pasteur"
+    },
+    {
+      "key": "NEURO-MASTER-CLASS",
+      "isActive": true,
+      "owner": "Formation Master Class"
+    },
+    {
+      "key": "STUDENT-BATCH-A1",
+      "isActive": true,
+      "owner": "Promotion 2025 - Groupe A"
+    },
+    {
+      "key": "STUDENT-BATCH-A2",
+      "isActive": true,
+      "owner": "Promotion 2025 - Groupe A"
+    },
+    {
+      "key": "STUDENT-BATCH-B1",
+      "isActive": true,
+      "owner": "Promotion 2025 - Groupe B"
+    },
+    {
+      "key": "RESEARCH-LAB-CNRS",
+      "isActive": true,
+      "owner": "Laboratoire CNRS"
+    },
+    {
+      "key": "BETA-TESTER-01",
+      "isActive": true,
+      "owner": "Bêta Testeur Alpha"
+    },
+    {
+      "key": "BETA-TESTER-02",
+      "isActive": true,
+      "owner": "Bêta Testeur Bravo"
+    },
+    {
+      "key": "VIP-ACCESS-GOLD",
+      "isActive": true,
+      "owner": "Partenaire Gold"
+    },
+    {
+      "key": "EXPIRED-KEY-2023",
+      "isActive": false,
+      "owner": "Ancienne Licence"
+    },
+    {
+      "key": "REVOKED-USER-X",
+      "isActive": false,
+      "owner": "Utilisateur Bloqué"
+    },
+    {
+      "key": "RADIOLOGY-RESIDENT-01",
+      "isActive": true,
+      "owner": "Interne Radiologie"
+    },
+    {
+      "key": "RADIOLOGY-RESIDENT-02",
+      "isActive": true,
+      "owner": "Interne Radiologie"
+    },
+    {
+      "key": "RADIOLOGY-RESIDENT-03",
+      "isActive": true,
+      "owner": "Interne Radiologie"
+    },
+    {
+      "key": "PHYSICS-DEPT-HEAD",
+      "isActive": true,
+      "owner": "Chef Dept Physique"
+    },
+    {
+      "key": "MRI-TECH-TRAINING",
+      "isActive": true,
+      "owner": "Formation Manipulateur Radio"
+    },
+    {
+      "key": "GUEST-SPEAKER-CONF",
+      "isActive": true,
+      "owner": "Conférencier Invité"
     }
   ]
 }
