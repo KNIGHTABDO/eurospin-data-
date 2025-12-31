@@ -47,8 +47,8 @@
     },
     {
       "key": "NEURO-MASTER-CLASS",
-      "isActive": true,
-      "owner": "Formation Master Class"
+      "isActive": false,
+      "owner": "Formation Master Class (ACTIVATED)"
     },
     {
       "key": "STUDENT-BATCH-A1",
